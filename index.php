@@ -1,4 +1,1 @@
  < ?php header("Location: http://www.redirect.to.url.com/"); ?>
-<body>
- asdsddas
- <body>
