@@ -5571,7 +5571,7 @@ b {
 
 @media (min-width:1024px) and (max-height:919px) {
     .services__logo {
-        height: 50px;
+        height: 100px;
         margin-bottom: 35px
     }
 }
@@ -9478,7 +9478,6 @@ header .header__mobile-btn.clicked:after {
     font-size: 16px;
     color: #fff;
     line-height: 21px;
-    text-transform: lowercase
 }
 
 @media (max-width:1023px) {
@@ -10092,7 +10091,6 @@ header .header__mobile-btn.clicked:after {
     font-weight: 600;
     color: #121212;
     line-height: 46px;
-    text-transform: lowercase;
     -webkit-text-stroke: 0;
     padding-right: 5%;
     margin-bottom: 50px

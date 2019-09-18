@@ -168,11 +168,11 @@
                             <div class="form__right-column" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
                                 <div class="form__group select">
                                     <label class="form__label select"> Choose your event for participation</label><br />
-                                    <span class="wpcf7-form-control-wrap type"><select name="type" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form__input select contact j-select" id="inquiry" aria-required="true" aria-invalid="false"><option value=""></option><option value="new project">Hackathon</option><option value="partnership">Code IT</option><option value="press">UI\UX development</option><option value="careers">Java</option><option value="other">Android</option></select></span>
+                                    <span class="wpcf7-form-control-wrap type"><select name="type" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form__input select contact j-select" id="type" aria-required="true" aria-invalid="false"><option value=""></option><option value="new project">Hackathon</option><option value="partnership">Code IT</option><option value="press">UI\UX development</option><option value="careers">Java</option><option value="other">Android</option></select></span>
                                 </div>
                                 <div class="form__group textarea">
                                     <label class="form__label">how can we help you? </label><br />
-                                    <span class="wpcf7-form-control-wrap description"><textarea name="description" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form__input" id="description" aria-invalid="false" placeholder="describe your idea"></textarea></span>
+                                    <span class="wpcf7-form-control-wrap description"><textarea name="descriptions" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form__input" id="description" aria-invalid="false" placeholder="describe your idea"></textarea></span>
                                 </div>
                                 <div class="form__btn-wrapper">
                                     <button class="btn" id="submit" onclick="submit()">Submit</button>
@@ -226,14 +226,14 @@
             var last_name = document.getElementById("last").value;
             var email = document.getElementById("email").value;
             var mobile_no = document.getElementById("number").value;
-            var inquiry = document.getElementById("inquiry").value;
+            var type = document.getElementById("type").value;
             var describe = document.getElementById("description").value;
-            db.collection("contact").doc().set({
+            db.collection("registrations").doc(type).collection("participants").set({
                 first_name: first_name,
                 last_name: last_name,
                 email: email,
                 mobile_no: mobile_no,
-                inquiry: inquiry,
+                type: type,
                 describe: describe
 
             })
